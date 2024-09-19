@@ -21,20 +21,19 @@ public class MyMath {
      * @param exponent the exponent
      * @return the power
      */
-    public static double power(int base, int exponent) {
+    public static double power(int base, int exponent) {0
         double result = 1;
         // If exponent is negative, do the following. 
         if (exponent < 0) {
-            for (int i = 1; i >= exponent; i--) {
+            for (int i = -1; i >= exponent; i--) {
                 result = result / base;
             }
-
-            return result;
-        }
-
-        for (int i = 1; i <= exponent; i++) {
-            result = result * base;
-        }
+        // If exponent is positive, do the following
+        } else {
+            for (int i = 1; i <= exponent; i++) {
+                result = result * base;
+         }
+        }   
 
         return result;
     }
